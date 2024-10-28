@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task6</title>
+</head>
+
+<body>
+    <script>
+        // problem 1 =>
+        let input1 = Number(prompt("Enter the value 1 :"));
+        let input2 = Number(prompt("Enter the value 2 :"));
+        console.log("Sum of given two inputs :", input1 + input2)
+        console.log("Substracion of given two inputs :", input1 - input2)
+        console.log("Multiplication of given two inputs :", input1 * input2)
+        console.log("Divison of given two inputs :", input1 / input2)
+        console.log("Comparing given two inputs :", input1 < input2)
+        console.log("Comparing given two inputs :", input1 > input2)
+        console.log("comparing given two inputs :", input1 == input2)
+        console.log("Adding 5 to the 1st input :", input1 + 5)
+
+
+        // problem 2 =>
+        let firstName = prompt("Enter the Firs Name :");
+        let lastName = prompt("Enter the Last Name :");
+        let age = Number(prompt("Enter the age :"));
+        var fullName = firstName + " " + lastName;
+        console.log("Full Name : ", fullName);
+        var voteElegibility = (age >= 18) ? "You are Eligible for Vote" : "You are not eligible for Vote";
+        console.log(voteElegibility);
+        var fullNameLength = fullName.length;
+        console.log("Length of the fullname : ", fullNameLength);
+        console.log((fullNameLength >= 10) ? "Yes, length is greater than 10" : "No, length is not greater than 10");
+
+        
+        // problem 3 =>
+        let number01 = Number((prompt("Enter the value 1 : ")))
+        console.log("Modulus value of given number : ", number01 % 2)
+        console.log("Exponential value of given number : ", number01 ** 2)
+        console.log("is the given number is greater than 50 : ", number01 > 50)
+        console.log("is the given number is less than or equal to 50 : ", number01 <= 50)
+        let checking = (number01 % 2 == 0) ? "The given number is : Even" : "The given number is : Odd"
+        console.log(checking)
+
+
+        // problem 4 =>
+        let num1 = Number(prompt("Entet the value 1 : "));
+        let num2 = Number(prompt("Entet the value 2 : "));
+        let num3 = Number(prompt("Entet the value 3 : "));
+        sumOfTwo = num1 + num2;
+        console.log("Sum of the first two numbers : ", sumOfTwo);
+        console.log("Is num3 greater than sumOfTwo : ", num3 > sumOfTwo);
+        var logic = (sumOfTwo > 50 && num3 < 100) ? "Yes --> the sum of the first two numbers is greater than 50 and the third number is less than 100," :
+            "No --> the sum of the first two numbers is not greater than 50 and the third number is not less than 100";
+        console.log(logic);
+
+
+        // problem 5 =>
+        let firstName1 = prompt("Entet the value 1 : ");
+        let lastName1 = prompt("Entet the value 2 : ");
+        let number = Number(prompt("Entet the value 3 : "));
+        console.log("Full Name : ", firstName1 + " " + lastName1);
+        console.log("The type of given number is : ", typeof (number));
+        console.log("Incrementing the given number with 10 = ", number += 10);
+
+
+        // problem 6 =>
+        let totalAmount = Number(prompt("Enter the Number :"));
+        var discout = (totalAmount > 150) ?
+            console.log("You have the discount : ", totalAmount * (15 / 100)) :
+            console.log("Discount not applicable");
+        console.log("The total amount with discount is : ", totalAmount - (totalAmount * (15 / 100)))
+
+
+        // problem 7 =>
+        let sentence = String(prompt("Enter the sentence :"));
+        var reversesentence = sentence.split("").reverse();
+        console.log("Is Length of the reversed sentence is longer than 15 : ", reversesentence > 15);
+        console.log((sentence > 20 || reversesentence > 20) ? "Yes => the original and reversed sentences are longer than 20 charecters" :
+            "No => the original and reversed sentences are not longer than 20 charecters");
+
+
+        // problem 8 =>
+        let input01 = Number(prompt("Enter the input 1 :"));
+        let input02 = Number(prompt("Enter the input 2 :"));
+        console.log(`By using & operator, the result is = ${input01 & input02}`);
+        console.log(`By using | operator, the result is = ${input01 | input02}`);
+        console.log(`By using ^ operator, the result is = ${input01 ^ input02}`);
+        var leftShift = input01 << 2
+        var rightShift = input01 >> 2
+        console.log(`By using left shift (<<) operator, the result is = ${leftShift}`);
+        console.log(`By using right shift (>>) operator, the result is = ${rightShift}`);
+        var comparing = (leftShift<input01)?"shifted number is lesser than the original number":
+                        (leftShift>input01)?"shifted number is greater than the original number":
+                        (leftShift==input01)?"shifted number is equal to the original number": "Not equal to"
+        console.log(`comparing the origianl and shifted value of input1 is : ${comparing}`)
+
+
+        // problem 9 =>
+        let salary = Number(prompt("Enter the salary :"));
+        let age1 = Number(prompt("Enter the age :"));
+        let creditScore = Number(prompt("Enter the credit score :"));
+        forLogicalAnd = ((age1 >= 21) && (salary >= 30000) && (creditScore >= 650)) ? "By considering all requirements. Yes, he is eligible for the Loan" :
+                                                                                       "By considering all requirements. No, he is not eligible for loan";
+        console.log(forLogicalAnd);
+        forLogicalOr = ((age1 >= 21) || (salary >= 30000) || (creditScore >= 650)) ? "By considering atleast one requirement. Yes, he is eligible for the Loan" :
+                                                                                    "By cnsidering atleast one requirement. NO, he is eligible for the Loan";
+        console.log(forLogicalOr);
+
+        
+        // problem 10 =>
+        let inputs1 = Number(prompt("Enter the input 1 :"));
+        let inputs2 = Number(prompt("Enter the input 2 :"));
+        let inputs3 = Number(prompt("Enter the input 3 :"));
+        sumOfAll = inputs1 + inputs2 + inputs3;
+        console.log(sumOfAll);
+        passOrFail = (sumOfAll>=60)? "The student is : Passed":"The student is : Falied";
+        console.log(passOrFail);
+        withBonus = (sumOfAll+5)>=60? "With the help of bonus the student is : Passed":
+                                        "Even with the help of bonus the student is : Failed";
+        console.log(withBonus);
+
+
+    </script>
+</body>
+
+</html>
